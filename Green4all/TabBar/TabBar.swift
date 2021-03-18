@@ -9,15 +9,19 @@ import SwiftUI
 
 
 
+
+
+
+//MARK: - /////////////  TabBar  \\\\\\\\\\\\\
+
 var tabItems = ["Project", "Guide","Market","Profil"]
-
-
 
 struct TabBar: View {
     @State var selected = "guide"
     
     init() {
         UITabBar.appearance().isHidden = true
+        UITableView.appearance().backgroundColor = .green // Uses UIColor
     }
     
     @State var centerX : CGFloat = 0
@@ -27,13 +31,16 @@ struct TabBar: View {
         VStack(spacing: 0) {
             TabView(selection: $selected) {
                 
-                Text("Projets")
+                Text("inserer Projets ici")
                     .tag(tabItems[0])
-                Text("Guide")
+                
+                Grid()
                     .tag(tabItems[1])
-                Text("Market")
+                
+                Text("inserer Market ici")
                     .tag(tabItems[2])
-                Text("Profile")
+                
+                Text("inserer Profile ici")
                     .tag(tabItems[3])
             }
             
@@ -93,7 +100,7 @@ struct TabBarButton: View {
                 
                 Text(value)
                     .font(.caption)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("bgGreen"))
                     .opacity(selected == value ? 1 : 0)
             }
             .padding(.top)
@@ -103,6 +110,8 @@ struct TabBarButton: View {
     }
 }
 
+
+
 //MARK: - /////////////  AnimatedShape  \\\\\\\\\\\\\
 
 struct AnimatedShape: Shape {
@@ -110,10 +119,10 @@ struct AnimatedShape: Shape {
     var centerX: CGFloat
     
     // animation
-//    var animatableData: CGFloat {
-//        get {return centerX}
-//        set {centerX = newValue}
-//    }
+    var animatableData: CGFloat {
+        get {return centerX}
+        set {centerX = newValue}
+    }
     
     func path(in rect: CGRect)-> Path {
         return Path { path in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5630CA0826034D730077D848 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630CA0726034D730077D848 /* GuideView.swift */; };
 		768357C5260348640032FE3A /* Green4allApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768357C4260348640032FE3A /* Green4allApp.swift */; };
 		768357C7260348640032FE3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768357C6260348640032FE3A /* ContentView.swift */; };
 		768357C9260348650032FE3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768357C8260348650032FE3A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5630CA0726034D730077D848 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		768357C1260348640032FE3A /* Green4all.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Green4all.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768357C4260348640032FE3A /* Green4allApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Green4allApp.swift; sourceTree = "<group>"; };
 		768357C6260348640032FE3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5630CA0626034D110077D848 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				5630CA0726034D730077D848 /* GuideView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
 		768357B8260348640032FE3A = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +62,7 @@
 		768357C3260348640032FE3A /* Green4all */ = {
 			isa = PBXGroup;
 			children = (
+				5630CA0626034D110077D848 /* Guide */,
 				768357C4260348640032FE3A /* Green4allApp.swift */,
 				768357C6260348640032FE3A /* ContentView.swift */,
 				768357C8260348650032FE3A /* Assets.xcassets */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5630CA0826034D730077D848 /* GuideView.swift in Sources */,
 				768357C7260348640032FE3A /* ContentView.swift in Sources */,
 				768357C5260348640032FE3A /* Green4allApp.swift in Sources */,
 			);

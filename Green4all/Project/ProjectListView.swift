@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ProjectListView: View {
     var body: some View {
-        Text("Branch Mounir")
+        
+        // NAVIGATION
+        NavigationView {
+            List (Project.listProjects) { project in
+                ProjectRowView(project: project)
+            } //: LIST
+        } //: NAVIGATION
     }
 }
 

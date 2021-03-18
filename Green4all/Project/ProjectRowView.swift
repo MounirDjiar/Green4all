@@ -13,32 +13,47 @@ struct ProjectRowView: View {
     
     var body: some View {
         HStack {
+            
             Image(project.picture)
                 .resizable()
-                .scaledToFit()
-                .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)
-                .frame(width: 110, height:110)
+                .scaledToFill()
+                .cornerRadius(8.0)
+                .frame(maxWidth: 110, maxHeight:110)
                 .clipped()
-            
-            VStack (alignment: .leading){
+            VStack (alignment: .leading) {
+                
                 Text(project.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(2)
+                
                 Text("Progression")
+                
                 HStack {
                     Image(systemName: "person.fill")
                     Text("10")
+                        .fontWeight(.bold)
                         .padding(.leading, -10.0)
-                                                
+                    
                     Image(systemName: "clock.arrow.circlepath")
                     Text("6J")
-                        .padding(.leading, -8.0)
+                        .fontWeight(.bold)
+                        .padding(.leading, -9.0)
                     
                     Image(systemName: "eurosign.circle")
                     Text("\(project.budget)€")
-                }
-            }
-        } // :HSTACK
-        .background(Color("bgGreen"))
-        .cornerRadius(/*@START_MENU_TOKEN@*/8.0/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, -9.0)
+                }//:HStack
+            }//:VStack
+            .padding(.horizontal, 10.0)
+            .frame(idealWidth: 234, maxWidth: 235, idealHeight: 110, maxHeight: 110)
+            
+        }// :HSTACK
+        .background(Color.white
+                        .opacity(0.9))
+        .cornerRadius(8.0)
         
     }
 }

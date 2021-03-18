@@ -25,7 +25,7 @@ struct Project :Identifiable {
 
 // EXTENSIONS
 extension Project {
-    static var project1:Project = Project(title: "Projet 1", description_project: "Description 1",
+    static var project1:Project = Project(title: "Projet 1 Projet 1 Projet 1 Projet 1", description_project: "Description 1",
         budget: 12000,
         picture: "icon_project1",
         video: "video_project1",

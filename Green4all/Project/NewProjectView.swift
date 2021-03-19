@@ -30,6 +30,6 @@ extension NewProjectView {
 
 struct NewProjectView_Previews: PreviewProvider {
     static var previews: some View {
-        NewProjectView(showAddProjectView: .constant(true))
+        NewProjectView(showAddProjectView: .constant(false))
     }
 }

@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ProjectDetailView: View {
+    
+    let project:Project
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading){
+            Image(project.picture)
+                .resizable()
+                .scaledToFit()
+            
+            HStack {
+                Text("Progress Bar")
+            }//:HStack
+            
+            
+            
+        }//:VStack
+        .padding(.horizontal)
     }
 }
 
 struct ProjectDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectDetailView()
+        ProjectDetailView(project: Project.project1)
     }
 }

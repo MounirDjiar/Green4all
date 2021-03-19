@@ -47,7 +47,7 @@ struct ProjectListView: View {
             
             // La modale addProject
             .sheet(isPresented: $showAddProjectView, content: {
-                NewProjectView(showAddProjectView: $showAddProjectView)
+                CreateProjectView(showAddProjectView: $showAddProjectView)
             })
             
         } //: NAVIGATION
@@ -78,7 +78,12 @@ extension ProjectListView {
                         $0.title.localizedStandardContains(searchText)
                 }
             ) { project in
-                ProjectRowView(project: project)
+                NavigationLink(
+                    destination: ProjectDetailView(project: project) ,
+                    label: {
+                        ProjectRowView(project: project)
+                    })
+                    
             }//: ForEach
         }//:ScrollView
     }

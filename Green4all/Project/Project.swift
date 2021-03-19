@@ -12,24 +12,22 @@ import Foundation
 struct Project :Identifiable {
     
     let id:UUID = UUID()
-    let title:String
-    let description_project:String
-    let budget: Int
-    let picture: String
-    let video:String?
-    let created_date: Date
-    let finished_date: Date
-    let category: Category
+    var title:String
+    var description_project:String
+    var budget: Int
+    var picture: String
+    var video:String?
+    var created_date = Date()
+    var finished_date: Date
+    var category: Category
 }
-
 
 // EXTENSIONS
 extension Project {
-    static var project1:Project = Project(title: "Projet 1 Projet 1 Projet 1 Projet 1", description_project: "Description 1",
+    static var project1:Project = Project(title: "Projet 1", description_project: "Description 1",
         budget: 12000,
         picture: "icon_project1",
         video: "video_project1",
-        created_date: Date(),
         finished_date: Date(),
         category: Category.bioeconomie
     )
@@ -38,7 +36,6 @@ extension Project {
         budget: 12000,
         picture: "icon_project2",
         video: "video_project2",
-        created_date: Date(),
         finished_date: Date(),
         category: Category.economiebleu
     )
@@ -47,7 +44,6 @@ extension Project {
         budget: 12000,
         picture: "icon_project3",
         video: "video_project3",
-        created_date: Date(),
         finished_date: Date(),
         category: Category.financeverte
     )
@@ -56,7 +52,6 @@ extension Project {
         budget: 12000,
         picture: "icon_project4",
         video: "video_project4",
-        created_date: Date(),
         finished_date: Date(),
         category: Category.risqueclimatique
     )

@@ -50,7 +50,6 @@
 		768357B8260348640032FE3A = {
 			isa = PBXGroup;
 			children = (
-				7DA6A8C62603FABC00F11A4A /* SearchBar.swift */,
 				768357C3260348640032FE3A /* Green4all */,
 				768357C2260348640032FE3A /* Products */,
 			);
@@ -67,6 +66,7 @@
 		768357C3260348640032FE3A /* Green4all */ = {
 			isa = PBXGroup;
 			children = (
+				7DA6A8C62603FABC00F11A4A /* SearchBar.swift */,
 				7D3ABB1226034D0A007C1A7D /* Project */,
 				768357C4260348640032FE3A /* Green4allApp.swift */,
 				768357C6260348640032FE3A /* ContentView.swift */,

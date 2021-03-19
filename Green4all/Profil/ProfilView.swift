@@ -20,7 +20,6 @@ struct ProfilView: View {
                 VStack(alignment: .leading){
                     
                     ProfilPresentation(profil: profil)
-           
                     
                     VStack{
                         Text("Mes Projets")

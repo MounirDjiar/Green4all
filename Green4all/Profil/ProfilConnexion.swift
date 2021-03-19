@@ -12,36 +12,49 @@ struct ProfilConnexion: View {
     @State var mail: String = ""
     @State var password: String = ""
     
+    
+    init(){
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().barTintColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().titleTextAttributes =
+            [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes =
+            [.foregroundColor: UIColor.white]
+    }
+    
     var body: some View {
         
         NavigationView{
             
-            
             ZStack{
                 Color("bgGreen")
                     .ignoresSafeArea()
-                
-                
+
                 VStack{
                     Form {
-                        Section {
-                        TextField("Émail", text: $mail)
-                            .onAppear{
-                                UITextField.appearance().attributedPlaceholder = NSAttributedString(string: "Émail", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-                            }
-                        SecureField("Mot de Passe", text: $password)
-                        
+                        Section{
+                            TextField("Émail", text: $mail)
                         }
+                        Section{
+                            SecureField("Mot de Passe", text: $password)
+                            
+                        }
+                        
                     }
                     .foregroundColor(Color("bgDarkGreen"))
-                    .frame(maxHeight: 150)
+                    .frame(maxHeight: 170)
                     .onAppear{
                         UITableView.appearance().backgroundColor = .clear
                     }
                     
-                    VStack(spacing: 50){
+                    VStack( spacing: 100){
                         
-                        VStack{
+                        Button(action: {}, label: {
+                            Text("Mot de Passe oublié ?")
+                        })
+                        
+                        
                         Button(action: {}, label: {
                             Text("Se Connecter")
                                 .fontWeight(.bold)
@@ -51,43 +64,23 @@ struct ProfilConnexion: View {
                         .background(Color("bgDarkGreen"))
                         .cornerRadius(10)
                         
-                        
                         Button(action: {}, label: {
-                            Text("Mot de Passe oublié ?")
+                            HStack {
+                            Text("Pas de compte ?" )
+                            Text("Inscrivez-vous")
                                 .fontWeight(.bold)
+                                }
                         })
-                        }
-                        
-                        Divider()
-                        
-                        VStack(spacing:15){
-                        Text("Nouveau sur Green4All ?")
-                            .fontWeight(.bold)
-                        
-                        Button(action: {}, label: {
-                            Text("S'inscrire")
-                                .fontWeight(.bold)
-                        })
-                        .padding(.horizontal, 115)
-                        .padding()
-                        .background(Color("bgDarkGreen"))
-                        .cornerRadius(10)
-                        }
                     }
                     
                 }
                 
-            }.foregroundColor(.white)
-            .navigationBarTitle("Connexion", displayMode: .inline)
-            .onAppear{
-                UINavigationBar.appearance().shadowImage = UIImage()
-                UINavigationBar.appearance().barTintColor = .clear
-                UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-                UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-                
             }
+            .foregroundColor(.white)
+            .navigationBarTitle("Connexion" , displayMode: .large)
+            
         }
-
+        
     }}
 
 struct ProfilConnexion_Previews: PreviewProvider {

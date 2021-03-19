@@ -30,7 +30,7 @@ struct ProfilConnexion: View {
             ZStack{
                 Color("bgGreen")
                     .ignoresSafeArea()
-
+                
                 VStack{
                     Form {
                         Section{
@@ -52,6 +52,7 @@ struct ProfilConnexion: View {
                         
                         Button(action: {}, label: {
                             Text("Mot de Passe oublié ?")
+                                .fontWeight(.bold)
                         })
                         
                         
@@ -66,10 +67,10 @@ struct ProfilConnexion: View {
                         
                         Button(action: {}, label: {
                             HStack {
-                            Text("Pas de compte ?" )
-                            Text("Inscrivez-vous")
-                                .fontWeight(.bold)
-                                }
+                                Text("Pas de compte ?" )
+                                Text("Inscrivez-vous")
+                                    .fontWeight(.bold)
+                            }
                         })
                     }
                     
